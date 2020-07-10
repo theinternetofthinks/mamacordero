@@ -1,4 +1,4 @@
-# VIVIENDO DIFERENCIA
+# MAMA CORDERO
 ## Project setup
 ```
 npm install
