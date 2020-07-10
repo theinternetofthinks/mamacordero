@@ -1,0 +1,338 @@
+.texto p, 
+.texto {
+   line-height: 30px;
+}
+section {
+   margin-bottom: 5rem;
+}
+.nav-sticky {
+   position: fixed;
+   width: 100%;
+   display: flex;
+   z-index: 9;
+   background: #fff;
+   left:0;
+}
+.overflow-x-hidden {
+   overflow-x: hidden;
+}
+main {
+   overflow: hidden;
+}
+.separator {
+   background: url('../img/separator.png') center center no-repeat;
+   background-size: cover;
+   display: block;
+   width: 100vw;
+   height: 40px;
+   margin-left: -15px;
+   margin-right: -15px;
+   margin-bottom: 50px;
+}
+.content {
+   &.history {
+      
+   }
+}
+
+#section-new {
+   //background: url('../img/bg-new.png') center center no-repeat;
+}
+
+.section-recetas {
+   //background: url('../img/bg-recetas.png') center center no-repeat;
+   min-height: 600px;
+   @media (min-width: 1199px) {
+      .images-receta {
+         img {
+            position: absolute;
+         }
+         .hamburguesa-receta {
+            left: -10px;
+            top: 260px;
+         }
+         .secreto-receta {
+            left: 368px;
+            top: -42px;
+         }
+         .torreznos-receta {
+            right: -30px;
+            top: -20px;
+         }
+         .pinchos-receta {
+            right: 50px;
+            top: 340px;
+         }
+      }
+   }
+   .text {
+      max-width: 300px;
+   }
+   
+   @media (max-width: 1198px) {
+      min-height: 300px;
+      .products {
+         min-height: 300px;
+      }
+      .images-receta {
+         text-align:center;
+      }
+      img{
+         display: inline-block;
+         width: 40%;
+         position: relative;
+      }
+   }
+}
+.section-contact { 
+   font-family: 'Helvetica Neue LT Std';
+   .logo-footer {
+      width: 100%;
+      max-width: 300px;
+   }
+   form {
+      legend{
+         color:#fff;
+         font-weight: bold;
+         background: #18864a;
+         text-transform: uppercase;
+         font-size: 1.4rem;
+         padding: 5px;
+         position: relative;
+         margin-bottom: 20px;
+         &:before{
+            content: "";
+            position: relative;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 7.5px 0 7.5px;
+            border-color: #18864a transparent transparent transparent;
+            display: block;
+            position: absolute;
+            right: 10px;
+            bottom: -10px;
+         }       
+      }
+   }
+}
+.section-trucos { 
+
+   .bold-rice {
+      width: 100%;
+      @media (min-width: 1199px) {
+         width: 120%;
+         position: absolute;
+         bottom: 0;
+         left: -10%;
+      }
+
+   }
+   [class*="text-trucos"]{
+      position: relative;
+      margin-bottom: 30px;
+      .trucos4 {
+         position: absolute;
+         right: 0;
+         top: -30px;
+         height: 120px;
+      }   
+   }
+   .text-trucos2 {
+      @media (min-width: 1199px) {
+         margin-left: -50px;
+         position: relative;
+         p {
+            max-width: 80%;
+         }
+    }
+   }
+
+}
+
+
+
+
+
+.cordero-envasado {
+   position: absolute;
+   left: 0;
+   right: 0;
+   display: block;
+   margin: auto;
+   bottom:100px;
+   @media (max-width: 1198px) {
+      position: relative;
+      bottom: auto;
+   }
+}
+.section-always {
+   min-height: 600px;
+   @media (max-width: 1198px) {
+
+      min-height: 1px;
+   }     
+   .text {
+      max-width: 300px;
+   }  
+   @media (min-width: 1199px) {
+      
+      min-height: 600px;
+   }
+}
+.products {
+   min-height: 600px;
+   @media (max-width: 1198px) {
+
+      min-height: 1px;
+   }  
+   h2 {
+      &.title {
+         font-family: 'Averia Serif';
+         font-size: 3.75rem;
+         margin-bottom: 3rem;
+         color:#1d8649;
+         line-height: 3.75rem;
+      }
+      font-size: 1.2rem;
+      font-family: 'Geometos Rounded';
+      color: #000;
+   }
+   h3{
+      font-size: 1.3rem;
+   } 
+   .cordero-envasado {
+      @media (min-width: 1199px) {
+         position: absolute;
+         left: 0;
+         right: 0;
+         display: block;
+         margin: auto;
+         bottom:0px;
+      }   
+      width: 100%;
+      
+   }  
+   
+   @media (min-width: 1199px) {
+      
+      .product {
+         position: absolute;
+         &.pinchos {
+            left: 570px;
+            top: 363px;
+            .text {
+               position: absolute;
+               bottom: 68px;
+               right: -167px;
+               &:before {
+                  content: "";
+                  background: url('../img/more.png') center center no-repeat;
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                  background-size: 100%;
+                  position: absolute;
+                  bottom: -25px;
+                  left: -3px;
+               }                 
+            }           
+         }
+         &.torreznos {
+            left: 108px;
+            top: 366px;
+            .text {
+               position: absolute;
+               top: -45px;
+               left: 35px;
+               &:before {
+                  content: "";
+                  background: url('../img/more.png') center center no-repeat;
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                  background-size: 100%;
+                  position: absolute;
+                  bottom: 15px;
+                  left: -30px;
+               }                 
+            }
+            
+            
+         }
+         &.hamburguesas {
+            right: -90px;
+            top: -90px;
+            .text {
+               position: absolute;
+               left: 150px;
+               bottom: -51px;
+               &:before {
+                  content: "";
+                  background: url('../img/more.png') center center no-repeat;
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                  background-size: 100%;
+                  position: absolute;
+                  bottom:-21px;
+               }                 
+            }
+         }
+         &.secreto {
+            left: 340px;
+            top: 10px;
+            .text {
+               position: absolute;
+               left: 333px;
+               bottom: 35px;
+               width: 100%;
+               &:before {
+                  content: "";
+                  background: url('../img/more.png') center center no-repeat;
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                  background-size: 100%;
+                  position: absolute;
+                  bottom:-20px;
+               }            
+            }
+         }
+      }
+      
+      img {
+         max-width: 100%;
+      }
+   }
+   @media (max-width: 1198px) {
+      .product {
+         position: relative;
+         display: inline-block;
+         width: 48%;
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+.steps-receta {
+   li {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+   }
+}
+.title.tab {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.img-modal-bg {
+   display: block;
+   margin: auto;
+   @media (min-width: 1199px) {
+      position: absolute;
+      bottom:-15px;
+   }
+} 

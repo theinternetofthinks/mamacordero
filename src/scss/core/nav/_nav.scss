@@ -1,0 +1,42 @@
+.navbar {
+   //background: url('../img/bg-nav.png') center center no-repeat;
+   height: 100%;
+   @media (max-width: 1198px) {
+      text-align: center;
+      [class*="btn"]{
+         display: inline-block;
+         width: 50%;
+         position: relative;
+         img {
+            width: 100%;
+         }
+      }
+   }
+   @media (min-width: 1199px) {
+      .btn1 {
+         position: absolute;
+         top: 18px;
+         right: 30px;
+      }
+      .btn2 {
+         position: absolute;
+         top: 180px;
+         left: 10px;
+      }
+      .btn3 {
+         position: absolute;
+         top:324px;
+         right: 0;
+      }
+      .btn4 {
+         position: absolute;
+         top: 478px;
+         left: 50px;
+      }
+   }
+ 
+
+
+}
+
+

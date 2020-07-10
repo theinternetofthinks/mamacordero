@@ -1,0 +1,37 @@
+.tooltip-inner {
+   max-width: 200px;
+   padding: 15px;
+   font-size: 1.1rem;
+   color: $color-gunmetal;
+   text-align: center;
+   background-color: $color-white;
+   border-radius: .0;
+   @extend .shadow;
+   text-align: left;
+
+   strong {
+      display: block;
+      font-size: 12px;
+   }
+   p {
+      margin: 0;
+      color: black;
+      font-weight: 600;
+   }
+}
+
+.bs-tooltip-top .arrow:before {
+   border-top-color: $color-white;
+}
+
+.bs-tooltip-left .arrow:before {
+   border-left-color: $color-white;
+}
+
+.bs-tooltip-right .arrow:before {
+   border-right-color: $color-white;
+}
+
+.bs-tooltip-bottom .arrow:before {
+   border-bottom-color: $color-white;
+}

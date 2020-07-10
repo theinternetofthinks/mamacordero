@@ -1,0 +1,20 @@
+.section--center {
+
+   .button-text {
+      text-align: right;
+      @include media-breakpoint-down(sm) {
+         text-align: center;
+      }
+   }
+
+   @include media-breakpoint-down(sm) {
+      .title-section {
+         text-align: center;
+      }
+
+      .subtitle-section {
+         text-align: center;
+      }
+   }
+}
+

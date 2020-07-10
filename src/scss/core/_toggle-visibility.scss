@@ -1,0 +1,7 @@
+.toggle-element {
+   display: none;
+
+   &.show {
+      display: initial;
+   }
+}

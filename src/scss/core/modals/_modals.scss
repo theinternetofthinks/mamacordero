@@ -1,0 +1,156 @@
+@media (min-width: 1199px){
+   .modal-xl {
+      max-width: 1100px;
+   }
+}
+
+
+.modal {
+   z-index: 999999;
+   .title {
+      font-family: 'Geometos Rounded';
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      text-align: center;
+   }
+   .subtitle {
+      color:#21884c;
+      margin-bottom: 30px;
+      text-align: center;
+   }
+   .content {
+      width: 100%;
+      max-width: 300px;
+      color:#000;
+      text-align: center;
+      display: block;
+      margin: auto;
+   }
+   .ingredients{
+      font-size: 1.2rem;
+      color:#000;
+      line-height: 1;
+   }
+   .no-gutters {
+      [class*="col-"]{
+         padding: 5px;
+      }
+   }
+   .block-info{
+      color:#000;
+      font-family: 'Helvetica Neue LT Std';
+      font-size: 1.2rem;
+
+      table {
+         border: 1px solid #000;
+         width: 100%;
+      }
+      th {
+         background: #000;
+         color:#fff;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: bold;
+      }
+      td {
+         font-size: 1rem;
+         text-align: left;
+         line-height: 1rem;
+         border-bottom: 1px solid #000;
+         padding: 5px;
+         + td {
+            text-align: right;
+            border-bottom: 1px solid #000;
+
+         }
+
+      }
+
+   }
+   .howto-title {
+      color:#21884c;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 15px;
+   }
+   .howto-content {
+      color:#000;
+      padding: 0;
+      border:1px solid #21884c;
+      font-family: 'Helvetica Neue LT Std';
+      font-size: 1.2rem;
+      li {
+         border-bottom:1px solid #21884c;
+         padding: 5px;
+
+      }
+   }  
+   &.fade {
+      &.show {
+         background: rgba(0, 0, 0, .8)
+      }
+   }
+   .modal-content{
+      display: block;
+
+   }
+   .modal-header {
+      display: block;
+      border: none;
+      align-items: center !important;
+      padding: 10px;
+      position: relative;
+      z-index: 1;    
+      font-size: 20px;
+      color:$color-primary;
+      font-weight: bold;
+      padding-top: 10px;
+      background: $color-primary;
+      color:$color-white;
+      border-radius: 0;
+      background: url('../img/header-modal.png');
+      background-size: cover;
+      height: 70px;
+      &.bg-color-white {
+         padding: 2rem;
+         .modal-title {
+            color: $color-white;
+         }
+      }
+      
+   }
+   
+ 
+   
+   .close {
+      opacity: 1;
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+      margin: 0;
+      padding: 5px 0 5px 0;
+      
+      background: url('../img/icons/icon-close.png');;
+      background-size: contain;
+   }
+   
+   .modal-title {
+      color: $color-white;
+      font-size: 2rem;
+   }
+   
+   .modal-content {
+      background: none;
+      border: 0;
+   }
+   
+   .modal-body {
+      padding: 0;
+      background: url('../img/bg-page.png');
+      padding: 20px;   
+   }
+   
+}

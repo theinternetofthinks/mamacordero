@@ -1,0 +1,99 @@
+/*doc
+---
+title: Grid
+name: grid
+category: Components Grid
+---
+*/
+* {
+   box-sizing: border-box;
+}
+
+.wrapper {
+   position: relative;
+   &--roomdisplay {
+      overflow-x: hidden;
+   }
+}
+
+.container {
+   padding-right: $grid-gutter/2;
+   padding-left: $grid-gutter/2;
+   margin-right: auto;
+   margin-left: auto;
+   min-width: 320px;
+   @include clearfix();
+
+   &--fluid {
+      width: 100%;
+   }
+
+   &--full {
+
+      width: $container-full-size;
+      margin-right: auto;
+      margin-left: auto;
+      @media (max-width: $container-full-size) {
+         width: 100%;
+      }
+
+      //Para que no baile el scroll lateral no puede haber paddings ni margins
+      .row {
+         [class*="col-"]:first-child {
+            padding-left: 0 !important
+         }
+         [class*="col-"]:last-child {
+            padding-right: 0 !important
+         }
+      }
+
+   }
+
+}
+
+.row {
+   margin-left: $grid-gutter/2*-1;
+   margin-right: $grid-gutter/2*-1;
+   @include clearfix;
+
+   //	 Rows sin padding interior
+   &--no--padding {
+      margin-left: 0;
+      margin-right: 0;
+
+      > [class*="col-"] {
+         padding-left: 0;
+         padding-right: 0;
+      }
+
+   }
+}
+
+.no-gutters {
+
+   &-sm {
+      @include media-breakpoint-down(sm) {
+
+         > .col,
+         > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+         }
+      }
+   }
+
+   &-md {
+      @include media-breakpoint-down(md) {
+
+         > .col,
+         > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+         }
+      }
+   }
+}
+
+[class*="col-"] {
+   float: left;
+}

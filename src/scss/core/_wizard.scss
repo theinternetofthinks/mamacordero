@@ -1,0 +1,107 @@
+.wizard {
+   @extend .clearfix;
+   position: relative;
+
+   &__step {
+      position: relative;
+      padding: 0;
+
+      &::before, &::after {
+         position: absolute;
+         content: "";
+         display: block;
+         top: 5px;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         background: #eaebeb;
+         z-index: 1;
+      }
+
+      &:first-child {
+         &::before, &::after {
+            right: 0;
+            left: initial;
+            width: 50%;
+         }
+      }
+
+      &:last-child {
+         &::before, &::after {
+            width: 50%;
+         }
+      }
+
+      &-icon {
+         display: inline-block;
+         width: 11.8px;
+         height: 11.8px;
+         background: $color-white;
+         border: 1px solid $color-white;
+         color: #fff;
+         border-radius: 50%;
+         position: absolute;
+         z-index: 2;
+         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+         left: 45%;
+      }
+
+      &-text {
+         color: $color-gunmetal;
+         font-weight: $font-bold;
+         margin-top: 3rem;
+      }
+
+      &.activated {
+         &::after {
+            background: $color-primary;
+         }
+      }
+
+      &.active {
+
+         .wizard__step-icon {
+            background: $color-primary;
+            width: 24.6px;
+            height: 24.6px;
+            border-width: 7px;
+            top: -8px;
+         }
+
+         &::after {
+            background: $color-primary;
+            width: 50%;
+         }
+
+         /*&+ .wizard__step {
+
+            &::after {
+               background: $color-primary;
+               width: 50%;
+            }
+
+         }*/
+      }
+
+      &.disabled {
+
+         .wizard__step-icon {
+            background: #eaebeb;
+            border-color: #eaebeb;
+            color: $color-primary;
+            box-shadow: none;
+         }
+
+         .wizard__step-text {
+            color: $color-gunmetal;
+            font-weight: $font-normal;
+         }
+
+         &::after {
+            background: none;
+         }
+
+      }
+
+   }
+}

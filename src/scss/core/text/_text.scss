@@ -1,0 +1,461 @@
+/*	--------------------------------------------------
+Textos, titulos y enlaces
+-------------------------------------------------- */
+
+//Selección de textos
+::-moz-selection { /* Code for Firefox */
+   color: $color-white;
+   background: $color-text;
+}
+
+::selection {
+   color: $color-white;
+   background: $color-text;
+}
+
+//Base para calcular las fuentes en REMs
+html {
+   font-size: 62.5%; // 1.6rem = 16px, 2.0rem = 20px, etc...
+   @media (max-width: 767px) {
+      font-size: 60%; // Reducimos el tamaño en móvil.
+   }
+
+}
+
+body {
+   margin: 0;
+   font-size: 1.4rem;
+   line-height: 2.0rem;
+   background: url('../img/bg-page.png');
+   font-family: 'Averia Serif';
+   font-size: 2.4rem;
+   color: $color-text;
+   font-smoothing: antialiased;
+}
+
+//Reset a los Hx para que no tengan valores, se les pasará mediante clases
+h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   margin: 0;
+   width: auto;
+   color: inherit
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+   display: block;
+   margin: 0;
+   text-decoration: none;
+   font-size: inherit;
+   margin: 0;
+   width: auto;
+   color: inherit;
+   font-weight: 300;
+   &.display-inline-block {
+      display: inline-block;
+   }
+}
+.title {
+   font-family: 'Averia Serif';
+   color: #1d8649;
+   margin-bottom: 3rem;
+   font-size: 3.75rem;
+   line-height: 4rem;
+}
+a {
+   color: $color-primary;
+
+   &:hover {
+      color: $color-primary;
+      text-decoration: none;
+   }
+}
+
+.h1 {
+   font-weight: bold;
+   font-size: 3.6rem;
+
+}
+
+.text-8 {
+   font-size: 0.8rem !important;
+   line-height: 1rem;
+}
+
+.text-10 {
+   font-size: 1rem !important;
+   line-height: 1.2rem;
+
+}
+
+.text-11 {
+   line-height: 1.1rem;
+   font-size: 1.1rem !important;
+}
+
+.text-12 {
+   font-size: 1.2rem !important;
+  
+}
+
+.text-14 {
+   font-size: 1.4rem!important;
+}
+
+p {
+   font-size: 1.4rem;
+   line-height: 2rem;
+}
+
+.text-16 {
+   font-size: 1.6rem !important;
+}
+
+.text-18 {
+   font-size: 1.8rem !important;
+   line-height: 2.2rem !important;
+}
+
+.text-20 {
+   font-size: 2rem !important;
+   line-height: 2.5rem !important;
+}
+
+.text-22 {
+   font-size: 2.2rem !important;
+   line-height: 2.5rem !important;
+}
+
+.text-28 {
+   font-size: 2.8rem !important;
+   line-height: 2.8rem !important;
+}
+.text-30 {
+   font-size: 3rem !important;
+   line-height: 3rem !important;
+   letter-spacing: 3px;
+   font-family: 'futura-book';
+   font-weight: lighter;
+}
+.text-40 {
+   font-size: 4rem !important;
+   line-height: 4rem !important;
+}
+.text-45 {
+   font-size: 4.5rem !important;
+   line-height: 4.5rem !important;
+   letter-spacing: -2.2px
+}
+.text-65 {
+   font-size: 6.5rem !important;
+   line-height: 6.5rem !important;
+   letter-spacing: 0.5px;
+}
+[data-max-lines] {
+   line-height: 20px;
+   p {
+      margin-bottom: 20px;
+   }
+   li {
+      margin-bottom: 5px;
+   }
+}
+
+
+
+
+.text-dots {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+}
+
+.font-shelby {
+   font-family: shelby, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.font-baskerville {
+   font-family: 'Libre Baskerville', serif;
+}
+.font-viva {
+   font-family: "Viva";
+   letter-spacing: 2px;
+}
+
+
+
+.title-bg {
+   position: relative;
+   &::before{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      content: "";
+      background: url(../img/n-bg.png);
+      background-size: cover;
+      z-index: -1;
+   }
+}
+
+.title-page {
+   font-size: 1.8rem;
+   line-height: 2rem;
+   margin-bottom: 1.5rem;
+   color: $color-black;
+   font-weight: $font-bold;
+
+   @include media-breakpoint-down(md) {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+   }
+}
+.title-decorator{
+   position: relative;
+   text-align: center;
+   font-family: baskerville;
+   font-weight: bold;
+   display: inline-block;
+   &:before {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background: $color-red;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      display: block;
+      margin: auto;
+      left: -20px;
+   }
+   &:after {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background: $color-red;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      display: block;
+      margin: auto;
+      right: -20px;
+
+   }   
+}
+.title-section {
+   font-size: 2.8rem;
+   line-height: 2.6rem;
+   margin-bottom: 2.2rem;
+   font-weight: $font-bold;
+   color: $color-gunmetal;
+   font-family: "baskerville";
+   border-bottom:1px solid $color-grey;
+   &--center {
+      font-size: 2.8rem;
+      font-weight: $font-normal;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 4rem;
+
+      &::before {
+         content: "";
+         display: block;
+         background: $color-black;
+         height: 1px;
+         width: 35%;
+         position: absolute;
+         display: block;
+         margin: auto;
+         bottom: -70%;
+         left: 0;
+         right: 0;
+      }
+   }
+}
+
+.subtitle-section {
+   @extend .text-18;
+
+   &--highlighted {
+      font-size: 2.8rem;
+   }
+}
+
+//Pending to remove class when all refactor is done
+.h2 {
+
+   &.no-margin {
+      margin: 0;
+   }
+
+   &.mb-15 {
+      margin-bottom: 15px;
+   }
+
+   &.title {
+      position: relative;
+      text-align: center;
+      color: #53565a;
+      font-size: 3.6rem;
+      padding-bottom: 10px;
+      margin-bottom: 50px;
+      font-weight: normal;
+
+      &:before {
+         content: "";
+         display: block;
+         background: #000000;
+         height: 1px;
+         width: 60px;
+         position: absolute;
+         display: block;
+         margin: auto;
+         bottom: 0;
+         left: 0;
+         right: 0;
+      }
+   }
+
+}
+
+.h3 {
+   font-weight: $font-bold;
+   font-size: 2rem;
+
+   &.title {
+      font-size: 1.4rem;
+      color: $color-black;
+   }
+
+   &.no-margin {
+      margin: 0;
+   }
+}
+
+i {
+   font-size: 1.2rem;
+   line-height: 1.6rem;
+   margin-bottom: 15px;
+   font-style: italic;
+   font-weight: normal;
+}
+em {
+   font-style: italic;
+}
+//Pending to remove class when all refactor is done
+p,
+.text {
+   font-weight: normal;
+   font-size: 1.4rem;
+   line-height: 2rem;
+   margin-bottom: 15px;
+   &.no-margin {
+      margin-bottom: 0;
+   }
+}
+
+strong {
+   font-weight: $font-bold;
+   &.title {
+      font-size: 1.4rem;
+      color: $color-gunmetal;
+   }
+}
+
+small, .small {
+   font-size: 1rem;
+   color: $color-gunmetal;
+   line-height: 15px;
+}
+
+.no-line-height {
+   line-height: 0;
+}
+
+.font-bold {
+   font-weight: $font-bold !important;
+}
+
+.font-medium {
+   font-weight: $font-medium !important;
+}
+
+.font-normal {
+   font-weight: $font-normal !important;
+}
+
+.font-light {
+   font-weight: $font-light !important;
+}
+
+.text-rich {
+
+   ul, ol {
+      list-style: inherit;
+      padding: 1.0rem 0 1.5rem 0;
+
+      li {
+         margin-left: 1.5rem;
+         padding-left: 1.5rem;
+      }
+   }
+
+   a {
+      font-size: inherit;
+      color: $color-primary;
+      font-weight: $font-medium;
+
+      @include hover {
+         color: darken($color-primary, 10%);
+         text-decoration: underline;
+      }
+
+      @include active-focus {
+         color: $color-primary;
+      }
+   }
+
+   h2, h3, h4, h5 {
+      margin-bottom: 1rem;
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.5;
+      color: inherit;
+   }
+
+   h2 {
+      font-size: 2rem;
+   }
+
+   h3 {
+      font-size: 1.75rem;
+   }
+
+   h4 {
+      font-size: 1.5rem;
+   }
+
+   h5 {
+      font-size: 1.25rem;
+   }
+
+   h6 {
+      font-size: 1rem;
+   }
+}
+
+.line-height-normal {
+   line-height: normal;
+}

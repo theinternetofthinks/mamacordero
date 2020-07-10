@@ -1,0 +1,36 @@
+$z-layers: (
+   "modal": 1041, 
+   "canvas-menu": 1039, 
+   "canvas-menu-background": 1038, 
+	"button-to-top": 101, 
+   "menu-main": 100,
+   "menu-main-dropdown": 1,
+   "searchbar-base": 601,
+   "header-dropdown": 1041,
+	"header": 600,
+   "hero-hotel-info": 1,
+   "hero-image": 0,
+   "banner-image" : 1,
+   "banner-image-before" : -1,
+   "banner-image-caption" : 1,
+   "select2-container" : 2,
+   "select2-results" : 1,
+   "form-loading" : 3,
+   "form-control-icon" : 1
+);
+
+@function zindex($layer) {
+	@if not map-has-key($z-layers, $layer) {
+	  @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+ 
+	@return  map-deep-get($z-layers, $layer);
+ }
+
+ @function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+	  $map: map-get($map, $key);
+	}
+ 
+	@return $map;
+ }

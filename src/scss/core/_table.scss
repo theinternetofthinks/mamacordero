@@ -1,0 +1,32 @@
+.table {
+   background: $color-white;
+   border: 1px solid $table-border;
+
+   th, td {
+      padding: 1.2rem;
+
+      &:active, &:focus {
+         outline: 0.1rem dotted $color-gunmetal;
+      }
+   }
+   thead {
+      th {
+         background: $table-th;
+         border: 0;
+         font-size: 1.3rem;
+         color: $color-gunmetal;
+         font-weight: $font-medium;
+      }
+   }
+
+   tbody {
+      td {
+         font-size: 1.2rem;
+         color: $color-gunmetal;
+
+      }
+   }  
+      
+}
+
+

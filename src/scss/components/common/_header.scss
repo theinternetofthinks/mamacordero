@@ -1,0 +1,188 @@
+$mobileHeaderHeight: 60px;
+$headerButtonHeight: 68px;
+.open {
+   nav{
+      @media (max-width: 1099px) {
+         left: 0;
+
+      }
+
+   }
+   .open-navigation {
+      background: none;
+      border: 0;
+      z-index: 11;
+      &:after,
+      &:before,
+      span{
+         background: $color-white;
+      }
+      span {
+         display: none;
+         height: 1px;
+         opacity: 0;
+      }
+      &:before{
+         transform: rotate(45deg);
+         top:0
+      }
+      &:after{
+         transform: rotate(-45deg);
+      }    
+   }
+}
+header {
+ //  height: 370px;
+ //  background: url('../img/bg-header.png');
+ //  background-size: cover;
+   margin-bottom: 40px;
+   .logo-header {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      img{
+         max-width: 223px;
+         @media (max-width: 1099px) {
+            max-width: 120px;
+
+         }
+      }
+   }
+   .open-navigation {
+      display: none;
+   }
+   @media (max-width: 1099px) {
+      .open-navigation {
+         width: 30px;
+         height: 15px;
+         position: absolute;
+         right: 10px;
+         top:80px;
+         display: block;
+         transition: all .8s linear;
+         border:0;
+         background: none;
+         &:after{
+            width: 100%;
+            height: 1px;
+            content: "";
+            background: $color-primary-dark;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .5s linear;
+
+         }
+         span{
+            width: 100%;
+            height: 1px;
+            background: $color-primary-dark;
+            display: block; 
+            transition: all .5s linear;
+        
+         }
+         &:before{
+            width: 100%;
+            height: 1px;
+            content: "";
+            background: $color-primary-dark;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: all .5s linear;
+
+         }         
+      }
+
+   }
+
+   nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 145px;
+      width: 100%;
+      ul{
+         li{
+            display: inline-block;
+            margin: 10px;
+            a{
+               color:#604c3a;
+               &:hover{
+                  color:#604c3a;
+                  font-weight: bold;
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+
+      @media (max-width: 1099px) {
+         transition: all .8s linear;
+         width: 100vw;
+         height: 100vh;
+         background: rgba($color-primary-dark,.9);
+         position: fixed;
+         left: 100vw;
+         top: 0;
+         z-index: 1;
+         ul{
+            li {
+               display: block;
+               text-align: center;
+               margin-top: 30px;
+               margin-bottom: 30px;
+               a{
+                  color:$color-white;
+               }
+            }
+         }
+
+      }
+   }
+   .contact-info {
+      margin-top: 35px;
+      background: #604c3a;
+      text-align: center;
+      height: 75px;
+      color:#fff;
+      margin-left: 90px;
+      position: absolute;
+      padding: 15px;
+      width:220px;
+      right: 0;
+      @media (max-width: 1099px) {
+         margin-top: 0;
+         padding: 7.5px;
+         width:auto;
+         height: 55px;
+
+      }
+      &:before{
+         content: "";
+         position: absolute;
+         left: -30px;
+         top: 0;
+         width: 0;
+         height: 0;
+         border-style: solid;
+         border-width: 0 30px 75px 0;
+         border-color: transparent #604c3a transparent transparent;
+         @media (max-width: 1099px) {
+            margin-top: 0px;
+            border-width: 0 30px 55px 0;
+         }     
+      }
+      a{
+         display: block;
+         color:#fff;
+         font-size: 25px;
+         @media (max-width: 1099px) {
+            font-size: 18px;
+         }   
+      }
+   }   
+}

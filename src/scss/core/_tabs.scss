@@ -1,0 +1,266 @@
+.nav-tabs {
+   &.steps {
+      border-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      li {
+         flex-grow: 1;
+         flex-basis: 0;
+         margin-left: 2.5px;
+         margin-right: 2.5px;
+         border-bottom: 3px solid $color-black;
+         color: $color-gunmetal;
+         padding-bottom: 10px;
+         font-size: 1.4rem;
+         &.active {
+            font-weight: $font-bold;
+            color: $color-black;
+
+            span {
+               font-weight: $font-bold;
+               color: $color-black;
+            }
+
+         }
+         &.nav-item-disabled {
+            color: $color-grey-cool-two;
+            border-bottom: 3px solid $color-grey-cool-two;
+         }
+         @include media-breakpoint-down(sm) {
+
+            .text {
+               display: none;
+
+            }
+            &.active {
+               flex-grow: 3;
+               .text {
+                  display: inline-block;
+
+               }
+            }
+         }
+         &.active {
+            border-bottom: 3px solid $color-primary;
+         }
+         &:hover {
+            &:before {
+               display: none;
+            }
+         }
+      }
+   }
+
+   
+
+   &.default {
+      border-bottom: 0;
+      top: -66px;
+      left: 15px;
+      border-bottom: none;
+      @include media-breakpoint-down(md) {
+         top: -60px;
+         left: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+         margin-top: -91px;
+         position: relative;
+         top: 0;
+      }
+      .nav-item {
+         border-radius: 4px 4px 0px 0px;
+         min-width: 200px;
+         @include media-breakpoint-down(md) {
+            min-width: 150px;
+         }
+         margin-left: 5px;
+         margin-right: 5px;
+         background: $color-gunmetal;
+         @extend .transition;
+         @include media-breakpoint-down(sm) {
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+            width: calc(33.3% - 5px);
+            min-width: 0;
+            height: 90px;
+            position: relative;
+            &:last-child {
+               margin-right: 0;
+            }
+            a.nav-link {
+               height: 100%;
+            }
+            strong {
+               text-align: left;
+
+            }
+            .price {
+               position: absolute;
+               bottom: 5px;
+               text-align: left;
+               font-size: 10px;
+               span {
+                  @include media-breakpoint-down(md) {
+                     display: block;
+                     line-height: 14px;
+                  }
+               }
+
+            }
+         }
+         .strong {
+            font-weight: bold;
+            @include media-breakpoint-down(sm) {
+               display: block;
+            }
+         }
+         .active {
+            &:before {
+               display: none;
+            }
+         }
+
+         background: $color-grey;
+         a, strong, span {
+            color: $color-black;
+         }
+
+         &:hover {
+            &:before {
+               display: none;
+            }
+         }
+         &:first-child {
+            margin-left: 0px;
+         }
+
+         .nav-link {
+            padding: 10px 15px 10px 15px;
+            background: none;
+            &.active,
+            &:hover {
+               background: $color-white;
+               border-color: $color-white;
+               a, strong, span {
+                  color: $color-black;
+               }
+            }
+
+            &.rewards {
+               background: $color-gunmetal;
+               color: $color-white;
+               border-color: $color-gunmetal;
+               min-width: 350px;
+               
+               &.active {
+      
+                  &:after {
+	                  top: 100%;
+                     left: 50%;
+                     border: solid transparent;
+                     content: " ";
+                     height: 0;
+                     width: 0;
+                     position: absolute;
+                     pointer-events: none;
+                     border-color: rgba(83, 86, 90, 0);
+                     border-top-color: $color-gunmetal;
+                     border-width: 10px;
+                     margin-left: -10px;
+                  }
+               }
+
+               @include hover {
+                  background-color: lighten($color-gunmetal, 10%);
+               } 
+
+               @include active-focus {
+                  background-color: $color-gunmetal;
+               }
+
+               @include media-breakpoint-down(sm) {
+                  min-width: 200px;
+               }
+               @include media-breakpoint-down(sm) {
+                  min-width: 0;
+                  .join {
+                     position: absolute;
+                     left: 40px;
+                  }
+                  .price {
+                     margin-left: 25px;
+                     font-size: 12px;
+                     line-height: 18px;
+                  }
+               }
+
+               span.discount {
+                  background: $color-white;
+                  border-radius: 50%;
+                  display: inline-block;
+                  width: 35px;
+                  height: 35px;
+                  color: $color-gunmetal;
+                  font-weight: $font-bold;
+                  float: left;
+                  line-height: 35px;
+                  position: relative;
+                  font-size: 12px;
+                  margin-left: -10px;
+                  @include media-breakpoint-down(sm) {
+                     margin-right: 5px;
+                     top: 15px;
+                     width: 30px;
+                     height: 30px;
+                     font-size: 10px;
+
+                  }
+               }
+               a, strong, span {
+                  color: $color-white;
+               }
+            }
+
+         }
+      }
+
+      a {
+         font-size: 1.4rem;
+      }
+      span {
+         font-size: 1.6rem;
+      }
+
+      strong {
+         display: block;
+         font-weight: $font-bold;
+         font-size: 1.6rem;
+         margin-bottom: 3px;
+         @include media-breakpoint-down(md) {
+            font-size: 1.5rem;
+            line-height: 14px;
+         }
+      }
+
+   }
+
+   .nav-item {
+      margin-bottom: 0;
+      text-align: center;
+      position: relative;
+   }
+
+   a, .nav-link {
+      color: #dee2e6;
+      position: relative;
+      text-align: center;
+      transition: all .4s ease;
+      position: relative;
+      &:hover {
+         color: $color-grey;
+      }
+   }
+}

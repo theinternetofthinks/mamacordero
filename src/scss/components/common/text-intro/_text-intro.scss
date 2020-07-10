@@ -1,0 +1,18 @@
+.block-intro-text {
+        .text-intro {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .title {
+        @extend .font-baskerville;
+        @extend .font-bold;
+        @extend .text-22;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .caption {
+        @extend .text-14;    
+        margin-bottom: 70px;
+
+    }
+}

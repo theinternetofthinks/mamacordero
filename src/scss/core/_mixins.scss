@@ -1,0 +1,175 @@
+//	----------------------------------------------------------------------------------------------------
+//
+//	 Mixins
+//
+// -----------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------
+//	Grid
+// --------------------------------------------------
+
+@mixin create-grid($size) {
+   
+   @if $size == "xs" {
+      $creen-size: $screen-xs ;
+   }
+   @if $size == "sm" {
+      $creen-size: $screen-sm ;
+   }
+   @if $size == "md" {
+      $creen-size: $screen-md ;
+   }
+   @if $size == "lg" {
+      $creen-size: $screen-lg ;
+   }
+   @if $size == "xl" {
+      $creen-size: $screen-xl ;
+   }
+   
+   @media (min-width: $creen-size) {
+      
+      .col-#{$size}-1 {
+         width: 8.33333333%;
+      }
+      
+      .col-#{$size}-2 {
+         width: 16.66666667%;
+      }
+      
+      .col-#{$size}-3 {
+         width: 25%;
+      }
+      
+      .col-#{$size}-4 {
+         width: 33.33333333%;
+      }
+      
+      .col-#{$size}-5 {
+         width: 41.66666667%;
+      }
+      
+      .col-#{$size}-6 {
+         width: 50%;;
+      }
+      
+      .col-#{$size}-7 {
+         width: 58.33333333%;
+      }
+      
+      .col-#{$size}-8 {
+         width: 66.66666667%;
+      }
+      
+      .col-#{$size}-9 {
+         width: 75%;
+      }
+      
+      .col-#{$size}-10 {
+         width: 83.33333333%;
+      }
+      
+      .col-#{$size}-11 {
+         width: 91.66666667%;
+      }
+      
+      .col-#{$size}-12 {
+         width: 100%;
+      }
+      
+   }
+   
+}
+
+// --------------------------------------------------
+//	Clearfix
+// --------------------------------------------------
+
+@mixin clearfix() {
+   &:before,
+   &:after {
+      content: " "; // 1
+   }
+   &:after {
+      clear: both;
+   }
+}
+
+// --------------------------------------------------
+//	Clases de Colores
+// --------------------------------------------------
+
+@mixin createBg($color-stack, $stack: 1) {
+   background: nth($color-stack, $stack);
+}
+
+@mixin createColor($color-stack, $stack: 1) {
+   color: nth($color-stack, $stack);
+}
+
+@mixin createFill($color-stack, $stack: 1) {
+   fill: nth($color-stack, $stack);
+}
+
+@each $color in $colors {
+   
+   $class: nth($color, 1);
+   $color-stack: ();
+   
+   @for $i from 2 through length($color) {
+      $color-stack: append($color-stack, nth($color, $i));
+   }
+   
+   .bg-#{$class}.bg-#{$class} {
+      @include createBg($color-stack, 1);
+   }
+}
+
+@each $color in $colors {
+   $class: nth($color, 1);
+   $color-stack: ();
+   
+   @for $i from 2 through length($color) {
+      $color-stack: append($color-stack, nth($color, $i));
+   }
+   
+   .#{$class}.#{$class} {
+      @include createColor($color-stack, 1);
+      //icons
+      @include createFill($color-stack, 1);
+   }
+}
+
+@mixin active {
+   &:not(:disabled):not(.disabled):active,
+   &:not(:disabled):not(.disabled).active {
+      @content;
+   }
+}
+
+@mixin active-focus {
+   &:not(:disabled):not(.disabled):active:focus,
+   &:not(:disabled):not(.disabled).active:focus {
+      @content;
+   }
+}
+
+@mixin focus {
+   &:focus,
+   &.focus {
+      @content;
+   }
+}
+
+@mixin disabled {
+   &:disabled:not(.m-progress),
+   &.disabled:not(.m-progress) {
+      @content;
+   }
+}
+
+@mixin disabled-hover {
+   &:disabled:hover:not(.m-progress),
+   &.disabled:hover:not(.m-progress) {
+      @content;
+   }
+}

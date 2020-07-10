@@ -1,0 +1,291 @@
+.dropdown {
+
+   .dropdown-menu {
+      box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.12);
+      background: $color-white;
+      margin: 0;
+      padding: 0;
+      z-index: zindex('menu-main-dropdown');
+
+      .dropdown-item {
+         font-size: 1.2rem;
+         line-height: 1.3rem;
+         padding: 1.5rem;
+         border-top: 1px solid #d8d8d8;
+         white-space: normal;
+
+         &:first-child {
+            border-top: none;
+         }
+
+         &.active,&:active {
+            font-weight: $font-bold;
+            background: $color-grey-soft;
+            color: #000!important;
+            opacity: 1 !important;
+         }
+      }
+   }
+}
+
+.options-group {
+   box-shadow: 0 2px 4px $color-shadow;
+   position: absolute;
+   transform: translate(-50%, 0);
+   left: 50%;
+   background: #fff;
+   min-width: max-content;
+   min-width: -moz-max-content;
+   min-width: -webkit-max-content;
+   min-width: -o-max-content;
+   margin-top: 20px;
+   border-top: 2px solid $input-placeholder-color;
+   z-index: $zindex1;
+   width: 100%;
+
+   @include media-breakpoint-down(md) {
+      min-width: 100%;
+   }
+
+   li {
+      margin-bottom: 0;
+      & div {
+         padding: 0 6px;
+      }
+      &[role="menuitem"] {
+         strong {
+            color: $color-primary;
+         }
+      }
+      &[role="menuitem"].active {
+         background: $color-light-purple;
+      }
+      &[role="menuitem"]:hover,
+      &[role="menuitem"].active div {
+         background: $color-light-purple;
+         font-weight: bold;
+         strong {
+            color: $color-primary;
+         }
+      }
+      &[role="menuitem"]:hover div {
+         color: $color-gunmetal;
+      }
+   }
+
+   .no-matches {
+      font-weight: $font-bold;
+      padding: 15px 20px;
+      display: block;
+      font-size: 1.4rem;
+      color: $color-gunmetal;
+   }
+
+   &.active {
+      width: 100%;
+      margin-left: -10px;
+   }
+
+   &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 7.5px 7px 7.5px;
+      border-color: transparent transparent $input-placeholder-color transparent;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: -9px;
+   }
+
+   > span {
+      font-size: 1.2rem;
+   }
+
+   @include media-breakpoint-down(md) {
+      z-index: 1;
+      position: absolute;
+
+      [class*="col-"] {
+         margin-bottom: 0px;
+      }
+   }
+
+   .navbar {
+      padding: 0;
+
+      @include media-breakpoint-down(md) {
+         display: none;
+      }
+
+      ul.nav {
+         background: #f3f3f2;
+         width: 100%; //border-top: 2px solid grey;
+         li {
+            border-style: solid;
+            border-width: 0 1px 1px 0;
+            border-color: #d8d8d8;
+            display: inline-block;
+            text-align: center;
+
+            &:last-child {
+               border-right-width: 0;
+            }
+
+            &.nav-item {
+               flex-grow: 1;
+               transition: all 0.2s ease-in-out;
+               &.grow {
+                  flex-grow: 2;
+               }
+
+               a.nav-link {
+                  border: 0;
+                  padding: 1.3rem 1rem;
+                  text-transform: capitalize;
+                  border-radius: 0;
+                  height: 48px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  span {
+                     font-size: 1.4rem;
+                     line-height: 2rem;
+                     display: inline-block;
+                     font-size: 1rem;
+                     font-weight: $font-normal;
+                     position: relative;
+                     margin-left: 5px;
+                     max-width: 0;
+                     overflow: hidden;
+                  }
+
+                  &.active {
+                     text-indent: inherit;
+                     border-bottom: 2px solid $color-primary;
+                     background-color: initial;
+                     color: initial;
+
+                     &:before {
+                        opacity: 1;
+                     }
+                     span {
+                        display: inline-block;
+                        max-width: 100%;
+                        text-align: left;
+                        color: $color-black;
+
+                        @include media-breakpoint-down(md) {
+                           width: 100%;
+                           display: block;
+                           margin: auto;
+                           text-align: center;
+                        }
+                     }
+                  }
+
+                  &:hover {
+                     border-bottom: 2px solid $color-primary;
+                     background-color: initial;
+                     &:before {
+                        opacity: 1;
+                     }
+                  }
+
+                  &:before {
+                     content: "";
+                     display: inline-block;
+                     width: 20px;
+                     height: 20px;
+                     background-repeat: no-repeat;
+                     background-position: center center;
+                     background-size: contain;
+                     transition: all 0.3s ease-out;
+                     opacity: 0.4;
+
+                     @include media-breakpoint-down(md) {
+                        margin: auto;
+                        margin-bottom: 10px;
+                        display: block;
+                     }
+                  }
+                  &.nav-poi {
+                     &:before {
+                        background-image: url($poi);
+                     }
+                  }
+                  &.nav-airports {
+                     &:before {
+                        background-image: url($airport);
+                     }
+                  }
+                  &.nav-hotels {
+                     &:before {
+                        background-image: url($hotel);
+                     }
+                  }
+                  &.nav-cities {
+                     &:before {
+                        background-image: url($destination);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .options-content {
+      position: relative;
+      max-height: 320px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: all 2s ease-in-out;
+      scroll-behavior: smooth;
+      @include media-breakpoint-down(md) {
+         max-height: 150px;
+      }
+      .option-header {
+         @extend .text-14;
+         margin: 0;
+         color: $color-gunmetal;
+         border: 0;
+         display: block;
+         width: 100%;
+         padding: 0.6rem 1.6rem;
+         background: #f3f3f2;
+         text-transform: capitalize;
+      }
+
+      li {
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         line-height: 1.6rem;
+         border-top: 1px solid #d8d8d8;
+         color: $color-gunmetal;
+         &:not(.item-parent) {
+            cursor: pointer;
+            &:hover {
+               color: $color-primary;
+
+               strong {
+                  color: $color-primary;
+               }
+            }
+
+            .num-hotel {
+               font-size: 1.1rem;
+               color: #9b9b9b;
+               font-weight: $font-medium;
+            }
+
+            strong {
+               font-weight: $font-bold;
+            }
+         }
+      }
+   }
+}

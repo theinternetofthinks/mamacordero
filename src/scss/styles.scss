@@ -1,0 +1,32 @@
+// VENDOR
+@import "~bootstrap/scss/bootstrap";
+@import "~reset-css/sass/reset";
+
+
+// CORE
+@import "core/vars";
+@import "core/mixins";
+@import "core/base64";
+@import "core/zindex";
+@import "core/fonts";
+@import "core/font-icons";
+@import "core/fixes";
+@import "core/grid";
+@import "core/helpers/helpers";
+@import "core/offcanvas/offcanvas";
+@import "core/print";
+@import "core/text/text";
+@import "core/icons/icons";
+@import "core/buttons/buttons";
+@import "core/lists/lists";
+@import "core/nav/nav";
+@import "core/modals/modals";
+@import "core/forms";
+
+
+// COMMON
+@import "components/common/header";
+@import "components/common/footer";
+@import "components/common/layout";
+
+

@@ -1,0 +1,75 @@
+.popover {
+   min-width: 300px;
+   border: 0;
+
+   .popover-header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff!important;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: none;
+      padding: 15px 15px 0;
+   }
+
+   .popover-body {
+      padding: 10px 15px 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 1rem;
+
+      & a {
+         text-decoration: underline;
+         color: #fff;
+      }
+   }
+
+   .arrow {
+      width: 100%;
+      left: 0;
+      height: 6px;
+   }
+}
+
+.bs-popover-bottom .arrow:after, .bs-popover-auto[x-placement^="bottom"] .arrow::after,
+.bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
+   border-bottom-color: transparent;
+}
+
+.bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after,
+.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
+   border-top-color: transparent;
+}
+
+.card {
+   &--fw-hotel {
+      .popover {
+         @include media-breakpoint-down(xl) {
+            left: -85px!important
+         }
+
+         @include media-breakpoint-down(lg) {
+            left: -104px!important
+         }
+
+         @include media-breakpoint-down(md) {
+            left: -73px!important
+         }
+         
+         @include media-breakpoint-down(xs) {
+            left: -160px!important;
+         }
+      }
+   }
+}
+
+.room-type {
+   .popover {
+      @include media-breakpoint-down(md) {
+         left: -100px!important
+      }
+      
+      @include media-breakpoint-down(xs) {
+         left: -150px!important;
+      }
+   }
+}

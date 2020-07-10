@@ -1,0 +1,278 @@
+// --------------------------------------------------
+//	Mediaqueries
+// --------------------------------------------------
+
+//Mobile First (min)
+$screen-xs: 576px; //320px
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1440px;
+
+//Desktop First (max)
+$screen-xs-max: ($screen-sm - 1); // 767px
+$screen-sm-max: ($screen-md - 1); // 991px
+$screen-md-max: ($screen-lg - 1); // 1199px
+$screen-lg-max: ($screen-xl - 1); // 1439px
+
+// --------------------------------------------------
+//	Grid
+// --------------------------------------------------
+
+$grid-cols: 12px;
+$grid-gutter: 30px;
+
+$container-sm: (720px + $grid-gutter) !default;
+$container-md: (940px + $grid-gutter) !default;
+$container-lg: (1140px + $grid-gutter) !default;
+$container-xl: (1410px + $grid-gutter) !default;
+
+$container-full-size: 1920px;
+
+// --------------------------------------------------
+//	Z-index
+// --------------------------------------------------
+$zindex0: 0;
+$zindex1: 100;
+$zindex2: 200;
+$zindex3: 300;
+$zindex4: 400;
+$zindex5: 500;
+$zindex6: 600;
+$zindex7: 700;
+$zindex8: 800;
+$zindex9: 900;
+$zindex90: 9000;
+
+// --------------------------------------------------
+//	Margins
+// --------------------------------------------------
+$margin1: 10px;
+$margin2: 20px;
+$margin25: 25px;
+$margin3: 30px;
+$margin4: 40px;
+$margin5: 50px;
+$margin6: 60px;
+$margin7: 70px;
+$margin8: 80px;
+$margin9: 90px;
+$margin10: 100px;
+
+// --------------------------------------------------
+//	Size of icons
+// --------------------------------------------------
+$icon-lg: 128px;
+$icon-md-lg: 80px;
+$icon-md: 32px;
+$icon-sm: 24px;
+$icon-xs: 16px;
+$icon-xxs: 12px;
+
+// --------------------------------------------------
+//	Height of inputs and buttons
+// --------------------------------------------------
+$input-height-xs: 20;
+$input-height-sm: 40;
+$input-height: 60;
+$input-height-lg: 70;
+
+// --------------------------------------------------
+// Header
+// --------------------------------------------------
+
+$mobileHeaderHeight: 60px;
+
+// --------------------------------------------------
+// Fonts, font sizes
+// --------------------------------------------------
+$font-bold: bold;
+$font-normal: normal;
+$font-medium: 300;
+$font-light: 100;
+
+$body: 1.6rem;
+
+$lead: 2.4rem;
+
+$small: 1.2rem;
+
+$h1: 4.0rem;
+$h2: 3.2rem;
+$h3: 2.2rem;
+$h4: 1.6rem;
+$h5: 1.4rem;
+$h6: 1.2rem;
+
+$h1-display: 8.0rem;
+$h2-display: 6.4rem;
+$h3-display: 4.4rem;
+$h4-display: 3.4rem;
+$h5-display: 3.2rem;
+$h6-display: 2.1rem;
+
+// --------------------------------------------------
+// Shadows
+// --------------------------------------------------
+$shadow-focus: 0 0 0 3px rgba(194, 8, 8, 0.25);
+
+// --------------------------------------------------
+// Colors - Name with http://chir.ag/projects/name-that-color/
+// --------------------------------------------------
+$color-primary: #18864a;
+$color-primary-dark: #33251d;
+$color-secondary: #604c3a;
+
+$color-white: #fff;
+$color-success: #99cc33;
+$color-info: #ffff00;
+$color-warning: #f5a623;
+$color-danger: #F84C4C;
+$color-text: #76777a;
+$color-text-25: rgba($color-text, .25);
+$color-shadow: rgba(8, 21, 37, 0.12);
+$color-red: #ee2e24;
+$color-red-trans: rgba(165, 22, 15, 0.9);
+$color-red-dark: #c8251c;
+
+//Greys
+$color-black: #202020;
+$color-black-50: rgba($color-black, .5);
+$color-grey-card: rgba($color-black, .08);
+$color-grey-dark: #9b9b9b;
+$color-ebony-clay: #252C34;
+$color-limed-spruce: #333C47;
+$color-limed-spruce-50: rgba($color-limed-spruce, .5);
+$color-limed-spruce-25: rgba($color-limed-spruce, .25);
+$color-silver: #C1C1C1;
+$color-silver-var: #CCCCCC;
+$color-mercury: #E3E3E3;
+$color-concrete: #F2F2F2;
+$color-alabaster: #F8F8F8;
+$color-alto: #D8D8D8;
+$color-mako: #45494d;
+$color-iron: #E0E1E1;
+$color-grey: #dedede;
+$color-grey-cool: #686868; //ADA: 97999b
+$color-grey-cool-two: #b1b3b3;
+$color-grey-soft: #f3f3f2;
+$color-grey-softest: #f3f3f3;
+$color-grey-totally-soft: #fafafa;
+$color-gunmetal: #53565a;
+$color-gallery: #eaeaea;
+$color-modal-grey: #eaeaea;
+$dark-blue-grey: #152935;
+
+// FORM
+$input-label: $color-gunmetal;
+$input-placeholder-color: #6C6C6C; // ADA textos: b1b3b3
+$input-color-text: #000000;
+$input-dark-label: #dfdfdf;
+$input-dark-placeholder-color: $color-grey; // ADA textos: b1b3b3
+$input-dark-color-text: $color-white;
+
+// Table
+$table-th: #ececec;
+$table-border: #eaeaea;
+
+//Colors
+$color-dodger-blue: #0091DA;
+$color-dodger-blue-50: rgba($color-dodger-blue, .5);
+$color-cerise-red: #D72A6B;
+$color-sunglow: #FFC732;
+$color-yellow: #FFFF00;
+$color-honey-flower: #470a68;
+$color-robins-egg-blue: #00BAB3;
+$color-lima: #7cb41b;
+$color-lima-darker: #518000;
+$color-carnation: #f84c4c;
+$color-tradewind: #57b8a2;
+
+$color-primary-soft: #ffcccc;
+$color-light-purple: #fae5e8;
+
+//Alerts
+$color-garnet: #64303b;
+$color-salmon: #f05c61;
+$color-skin: #f08d78;
+
+//Tier
+$color-tier-club: #fff;
+$color-tier-silver: #afafaf;
+$color-tier-gold: #c5ab69;
+$color-tier-black: #000;
+$color-tier-platinum: $color-tier-black;
+$color-tier-red: $color-primary;
+
+//Colors of social networks
+$color-facebook: #43619C;
+$color-twitter: #24A9E6;
+$color-linkedin: #187FB8;
+$color-pinterest: #cb2027;
+$color-youtube: #f61c0d;
+$color-instagram: #6a453b;
+$color-gplus: #DE4D3B;
+$color-tumblr: #395976;
+$color-weibo: #d0021b;
+
+
+//Array to create helper classes
+$colors: "color-primary" $color-primary,
+"color-primary-dark" $color-primary-dark,
+"color-secondary" $color-secondary,
+"color-light-purple" $color-light-purple,
+"color-white" $color-white,
+"color-success" $color-success,
+"color-info" $color-info,
+"color-warning" $color-warning,
+"color-danger" $color-danger,
+"color-black" $color-black,
+"color-black-50" $color-black-50,
+"color-ebony-clay" $color-ebony-clay,
+"color-limed-spruce" $color-limed-spruce,
+"color-limed-spruce-50" $color-limed-spruce-50,
+"color-limed-spruce-25" $color-limed-spruce-25,
+"color-text" $color-text,
+"color-text-25" $color-text-25,
+"color-silver" $color-silver,
+"color-silver-var" $color-silver-var,
+"color-mercury" $color-mercury,
+"color-concrete" $color-concrete,
+"color-alabaster" $color-alabaster,
+"color-mako" $color-mako,
+"color-alto" $color-alto,
+"color-honey-flower" $color-honey-flower,
+"color-dodger-blue" $color-dodger-blue,
+"color-dodger-blue-50" $color-dodger-blue-50,
+"color-yellow" $color-yellow,
+"color-cerise-red" $color-cerise-red,
+"color-twitter" $color-twitter,
+"color-pinterest" $color-pinterest,
+"color-youtube" $color-youtube,
+"color-instagram" $color-instagram,
+"color-sunglow" $color-sunglow,
+"color-facebook" $color-facebook,
+"color-tumblr" $color-tumblr,
+"color-gplus" $color-gplus,
+"color-weibo" $color-weibo,
+"color-linkedin" $color-linkedin,
+"color-robins-egg-blue" $color-robins-egg-blue,
+"color-iron" $color-iron,
+"color-grey" $color-grey,
+"color-grey-soft" $color-grey-soft,
+"color-grey-softest" $color-grey-softest,
+"color-grey-totally-soft" $color-grey-totally-soft,
+"color-grey-cool" $color-grey-cool,
+"color-grey-dark" $color-grey-dark,
+"color-gunmetal" $color-gunmetal,
+"color-tradewind" $color-tradewind,
+"color-lima-darker" $color-lima-darker,
+"color-lima" $color-lima,
+"color-tier-club" $color-tier-club,
+"color-tier-silver" $color-tier-silver,
+"color-tier-gold" $color-tier-gold,
+"color-tier-black" $color-tier-black,
+"color-tier-red" $color-tier-red,
+"color-gallery" $color-gallery,
+"color-red-dark" $color-red-dark
+
