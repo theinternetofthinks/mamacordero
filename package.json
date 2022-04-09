@@ -38,7 +38,7 @@
     "current-device": "^0.7.8",
     "jquery": "^3.3.1",
     "jsencrypt": "^3.0.0-rc.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "popper.js": "^1.14.4",
     "reset-css": "^4.0.1"
   }
