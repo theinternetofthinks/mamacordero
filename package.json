@@ -9,7 +9,7 @@
     "generate-icons-font": "grunt webfont"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.5.3",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
     "grunt-browserify": "^5.3.0",
